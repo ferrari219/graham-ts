@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const Api = axios.create({
-	baseURL: 'https://ferrari219.github.io/graham/data/',
+	baseURL: 'https://ferrari219.github.io/graham-ts/data/',
 });
 
 // Api.get('data1.json'); //test
