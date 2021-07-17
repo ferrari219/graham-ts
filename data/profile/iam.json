@@ -1,0 +1,8 @@
+{
+    "myname": "Sung-ho Jeon",
+	"job": "Frontend Developer / Designer",
+	"iam": "디자인, 개발 모두 다하는 욕심 많은 프론트엔드 개발자 전성호 입니다.",
+    "comment": "매일 공부하고, 새로운 기술 적용하는데서 재미를 느낍니다. 궁금한 점들을 찾아보고 직접 만들어보다보니 디자인, 개발 모두 다 하게 되었습니다.",
+	"birth": "1983. 2. 2",
+	"skills": "React, ES6, SASS, styled-components, gulp, jQuery, html, MySql, Node Express, Figma, Adobe XD, Photoshop, github, gitlab, "
+}
