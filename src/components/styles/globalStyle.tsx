@@ -10,6 +10,12 @@ const global = createGlobalStyle`
             box-sizing: inherit;
         }
     }
+	/* ${({ theme }) => {
+		return css`
+			body {
+			}
+		`;
+	}} */
     body {
         background: #141414;
         color: #fff;
@@ -66,78 +72,6 @@ const global = createGlobalStyle`
 
 export default global;
 
-/* color */
-export const Color = {
-	pColor: '#705aec',
-	gColor0: '#000',
-	gColor3: '#333',
-	gColor6: '#666',
-	gColor9: '#999',
-	gColorC: '#ccc',
-	gColorF: '#fff',
-};
-
-/* Heading */
-export const Heading1 = css`
-	margin: 2rem 0;
-	color: ${Color.gColor9};
-	line-height: 1.1;
-	font-size: 6rem;
-	font-weight: 600;
-	&--border {
-		border-top: 1px solid #333;
-		padding-top: 1.5rem;
-	}
-
-	&--noborder {
-		border: none;
-	}
-`;
-export const Heading2 = css`
-	margin: 0 0 1.5rem;
-	padding-bottom: 1rem;
-	border-bottom: 1px solid #ccc;
-	color: ${Color.gColor9};
-	line-height: 1.1;
-	font-size: 4rem;
-	font-weight: 600;
-	&--border {
-		border-top: 1px solid #333;
-		padding-top: 1.5rem;
-	}
-	&--noborder {
-		border: none;
-	}
-`;
-export const Heading3 = css`
-	margin: 0 0 1.5rem;
-	color: ${Color.gColorC};
-	line-height: 1.1;
-	font-size: 2rem;
-	font-weight: 600;
-	&--border {
-		border-top: 1px solid #333;
-		padding-top: 1.5rem;
-	}
-	&--noborder {
-		border: none;
-	}
-`;
-export const Heading4 = css`
-	margin: 0 0 1rem;
-	color: ${Color.gColor9};
-	line-height: 1.1;
-	font-size: 1.3rem;
-	font-weight: 600;
-	&--border {
-		border-top: 1px solid #333;
-		padding-top: 1.5rem;
-	}
-	&--noborder {
-		border: none;
-	}
-`;
-
 /* inherit Width, height */
 export const Inherit = css`
 	width: inherit;
@@ -145,15 +79,6 @@ export const Inherit = css`
 `;
 
 /* Custom module */
-export const Wrap = css`
-	width: 13rem;
-	margin: 0 auto;
-	padding: 2rem;
-`;
-export const Wrap100 = css`
-	width: 100%;
-`;
-
 export const SrOnly = css`
 	width: 1px;
 	height: 1px;
