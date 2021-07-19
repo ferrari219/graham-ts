@@ -1,8 +1,19 @@
-# Graham Resume (Typescript version)
+# Graham's (Typescript version)
 
 ## install modules
 
 ```
-styled-components
-styled-reset
+-   [x] axios
+-   [x] styled-components
+-   [x] styled-reset
+-   [x] gh-pages
 ```
+
+## Pages
+
+-   [ ] Home
+-   [ ] Detail
+
+### Web Fonts
+
+-
