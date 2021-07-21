@@ -1,4 +1,4 @@
-export const fonts = {
+const fonts = {
 	family: {
 		base: `AppleSDGothicNeo-Light, Roboto, NotoSansKR, 'Noto+Sans', 'Malgun Gothic', '맑은 고딕', sans-serif`,
 	},
@@ -16,7 +16,7 @@ export const fonts = {
 	},
 };
 
-export const colors = {
+const colors = {
 	point: '#705aec',
 	gray0: '#000',
 	gary3: '#333',
@@ -25,3 +25,10 @@ export const colors = {
 	grayC: '#ccc',
 	grayF: '#fff',
 };
+
+const theme = {
+	fonts,
+	colors,
+};
+
+export default theme;

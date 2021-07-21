@@ -10,15 +10,8 @@ const global = createGlobalStyle`
             box-sizing: inherit;
         }
     }
-	/* ${({ theme }) => {
-		return css`
-			body {
-			}
-		`;
-	}} */
-    body {
+	body {
         background: #141414;
-        color: #fff;
         a{
             text-decoration: none;
             color: inherit;

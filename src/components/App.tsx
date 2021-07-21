@@ -1,12 +1,14 @@
 import React from 'react';
-import GlobalStyle from 'components/styles/globalStyle';
 import Routers from 'components/Routers';
 import Refer from 'assets/img/refer.jpg';
 import styled from 'styled-components';
+import GlobalStyle from 'components/styles/globalStyle';
 
 const Section = styled.section`
 	position: relative;
 	z-index: 1;
+	width: inherit;
+	color: ${(props) => props.theme.colors.grayF};
 `;
 const ReferDiv = styled.div`
 	position: absolute;
