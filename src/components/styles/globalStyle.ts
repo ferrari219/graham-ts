@@ -11,6 +11,7 @@ const global = createGlobalStyle`
         }
     }
 	body {
+        /* background: #141414; */
         background: #141414;
         a{
             text-decoration: none;

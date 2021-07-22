@@ -8,7 +8,7 @@ const Section = styled.section`
 	position: relative;
 	z-index: 1;
 	width: inherit;
-	color: ${(props) => props.theme.colors.grayF};
+	color: ${({ theme }) => theme.colors.grayF};
 `;
 const ReferDiv = styled.div`
 	position: absolute;
@@ -17,6 +17,7 @@ const ReferDiv = styled.div`
 	width: 100%;
 	height: auto;
 	z-index: 0;
+	opacity: 0.3;
 	img {
 		width: inherit;
 	}
