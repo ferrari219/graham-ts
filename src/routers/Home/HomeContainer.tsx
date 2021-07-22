@@ -3,7 +3,7 @@ import HomePresenter from './HomePresenter';
 import { careerApi, profileApi } from 'api';
 
 interface IhomeState {
-	iam: object | null;
+	iam: Array<string> | null;
 	contact: object | null;
 	livart: object | null;
 	jobKorea: object | null;

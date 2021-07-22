@@ -4,7 +4,7 @@ import Loader from 'components/Loader';
 import Error from 'components/Error';
 
 interface IhomeProps {
-	iam: object | null;
+	iam: Array<string> | null;
 	contact: object | null;
 	livart: object | null;
 	jobKorea: object | null;
@@ -25,32 +25,24 @@ const HomePresenter: React.FunctionComponent<IhomeProps> = ({
 	p4line,
 	loading,
 	error,
-}) => (
-	// console.log(jobKorea);
-	<>
-		{loading ? (
-			<Loader />
-		) : (
-			<>
-				<div>Home</div>
-				{error && <Error error={error} />}
-				<div>{JSON.stringify(iam)}</div>
-				<div>{JSON.stringify(contact)}</div>
-			</>
-		)}
-	</>
-);
-
-// HomePresenter.propTypes = {
-// 	iam: PropTypes.object,
-// 	contact: PropTypes.object,
-// 	livart: PropTypes.object,
-// 	jobKorea: PropTypes.object,
-// 	pulip: PropTypes.object,
-// 	him: PropTypes.object,
-// 	p4line: PropTypes.object,
-// 	loading: PropTypes.bool.isRequired,
-// 	error: PropTypes.string,
-// };
+}) => {
+	console.log(iam);
+	console.log(contact);
+	return (
+		<>
+			{loading ? (
+				<Loader />
+			) : (
+				<>
+					{iam && iam.map((item) => <div>{item.myname}</div>)}
+					{/* <div>Home</div> */}
+					{error && <Error error={error} />}
+					{/* <div>{JSON.stringify(iam)}</div>
+					<div>{JSON.stringify(contact)}</div> */}
+				</>
+			)}
+		</>
+	);
+};
 
 export default HomePresenter;
