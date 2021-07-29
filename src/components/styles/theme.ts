@@ -26,9 +26,14 @@ const colors = {
 	grayF: '#fff',
 };
 
+const html = {
+	url: 'https://ferrari219.github.io/graham-ts'
+}
+
 const theme = {
 	fonts,
 	colors,
+	html
 };
 
 export default theme;
