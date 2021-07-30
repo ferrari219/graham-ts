@@ -5,7 +5,7 @@ import { careerApi, profileApi } from 'api';
 interface IhomeState {
 	iam: object | null;
 	// contact: object | null;
-	// livart: object | null;
+	livart: object | null;
 	// jobKorea: object | null;
 	// pulip: object | null;
 	// him: object | null;
@@ -18,7 +18,7 @@ class HomeContainer extends Component<{}, IhomeState> {
 	state = {
 		iam: null,
 		// contact: null,
-		// livart: null,
+		livart: null,
 		// jobKorea: null,
 		// pulip: null,
 		// him: null,
@@ -31,7 +31,7 @@ class HomeContainer extends Component<{}, IhomeState> {
 		try {
 			const { data: iam } = await profileApi.iam();
 			// const { data: contact } = await profileApi.contact();
-			// const { data: livart } = await careerApi.livart();
+			const { data: livart } = await careerApi.livart();
 			// const { data: jobKorea } = await careerApi.jobKorea();
 			// const { data: pulip } = await careerApi.pulip();
 			// const { data: him } = await careerApi.him();
@@ -43,7 +43,7 @@ class HomeContainer extends Component<{}, IhomeState> {
 			this.setState({
 				iam,
 				// contact,
-				// livart,
+				livart,
 				// jobKorea,
 				// pulip,
 				// him,
@@ -60,7 +60,7 @@ class HomeContainer extends Component<{}, IhomeState> {
 		const {
 			iam,
 			// contact,
-			// livart,
+			livart,
 			// jobKorea,
 			// pulip,
 			// him,
@@ -74,7 +74,7 @@ class HomeContainer extends Component<{}, IhomeState> {
 				<HomePresenter
 					iam={iam}
 					// contact={contact}
-					// livart={livart}
+					livart={livart}
 					// jobKorea={jobKorea}
 					// pulip={pulip}
 					// him={him}

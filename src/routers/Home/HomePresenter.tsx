@@ -3,13 +3,14 @@ import React from 'react';
 import Loader from 'components/Loader';
 import Error from 'components/Error';
 import Headers from 'components/Headers';
+import CarouselList from 'components/CarouselList';
 
 interface IhomeProps {
 	iam: object | null;
 	// myname: string | null;
 	// job: string | null;
 	// contact: object | null;
-	// livart: object | null;
+	livart: object | null;
 	// jobKorea: object | null;
 	// pulip: object | null;
 	// him: object | null;
@@ -21,7 +22,7 @@ interface IhomeProps {
 const HomePresenter: React.FunctionComponent<IhomeProps> = ({
 	iam,
 	// contact,
-	// livart,
+	livart,
 	// jobKorea,
 	// pulip,
 	// him,
@@ -31,16 +32,18 @@ const HomePresenter: React.FunctionComponent<IhomeProps> = ({
 }) => {
 	// console.log(iam && iam.myname);
 	// console.log(contact && contact.email);
+	console.log(livart);
 	return (
 		<>
 			{loading ? (
 				<Loader />
 			) : (
 				<>
-					{/* <div>{myname}</div> */}
-					{/* <div>Home</div> */}
-					{/* <Headers iam={iam} /> */}
 					{iam && <Headers {...iam} />}
+					<CarouselList title="Recent Work">
+						{livart && <div>{JSON.stringify(livart)}</div>}
+					</CarouselList>
+
 					{error && <Error error={error} />}
 					{/* <div>{JSON.stringify(iam)}</div> */}
 					{/* <div>{JSON.stringify(contact)}</div> */}

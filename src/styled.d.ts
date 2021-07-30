@@ -28,5 +28,8 @@ declare module "styled-components" {
             grayC: string;
             grayF: string;
         }
+        html: {
+            url: string
+        }
     }
 }
