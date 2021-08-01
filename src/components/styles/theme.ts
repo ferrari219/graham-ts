@@ -1,3 +1,5 @@
+import { css } from 'styled-components';
+
 const fonts = {
 	family: {
 		base: `AppleSDGothicNeo-Light, Roboto, NotoSansKR, 'Noto+Sans', 'Malgun Gothic', '맑은 고딕', sans-serif`,
@@ -19,7 +21,7 @@ const fonts = {
 const colors = {
 	point: '#705aec',
 	gray0: '#000',
-	gary3: '#333',
+	gray3: '#333',
 	gray6: '#666',
 	gray9: '#999',
 	grayC: '#ccc',
@@ -37,3 +39,17 @@ const theme = {
 };
 
 export default theme;
+
+export const Heading3 = css`
+	margin: 0 0 1.5rem;
+	line-height: 1.1;
+	font-size: 3.2rem;
+	font-weight: 600;
+	&--border {
+		border-top: 1px solid #333;
+		padding-top: 1.5rem;
+	}
+	&--noborder {
+		border: none;
+	}
+`;

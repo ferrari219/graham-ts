@@ -3,7 +3,8 @@ import React from 'react';
 import Loader from 'components/Loader';
 import Error from 'components/Error';
 import Headers from 'components/Headers';
-import CarouselList from 'components/CarouselList';
+import CarouselWrap from 'components/CarouselWrap';
+import Carousel from 'components/Carousel';
 
 interface IhomeProps {
 	iam: object | null;
@@ -32,7 +33,7 @@ const HomePresenter: React.FunctionComponent<IhomeProps> = ({
 }) => {
 	// console.log(iam && iam.myname);
 	// console.log(contact && contact.email);
-	console.log(livart);
+	// console.log(livart && livart.project);
 	return (
 		<>
 			{loading ? (
@@ -40,9 +41,10 @@ const HomePresenter: React.FunctionComponent<IhomeProps> = ({
 			) : (
 				<>
 					{iam && <Headers {...iam} />}
-					<CarouselList title="Recent Work">
-						{livart && <div>{JSON.stringify(livart)}</div>}
-					</CarouselList>
+					<CarouselWrap title="Recent Works">
+						<Carousel />
+						{/* {livart && <div>{JSON.stringify(livart)}</div>} */}
+					</CarouselWrap>
 
 					{error && <Error error={error} />}
 					{/* <div>{JSON.stringify(iam)}</div> */}

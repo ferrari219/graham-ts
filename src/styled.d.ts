@@ -22,7 +22,7 @@ declare module "styled-components" {
         colors: {
             point: string;
             gray0: string;
-            gary3: string;
+            gray3: string;
             gray6: string;
             gray9: string;
             grayC: string;

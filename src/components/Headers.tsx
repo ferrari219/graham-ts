@@ -45,7 +45,7 @@ const Menu = styled.div`
 		svg {
 			width: 100%;
 			height: auto;
-			fill: ${({ theme }) => theme.colors.grayF};
+			fill: ${({ theme }) => theme.colors.grayC};
 		}
 	}
 `;
