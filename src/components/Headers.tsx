@@ -6,7 +6,7 @@ interface IheaderProps {
 	myname?: string;
 }
 
-const Section = styled.section`
+const Section = styled.header`
 	display: flex;
 	flex-direction: row;
 	width: 100%;

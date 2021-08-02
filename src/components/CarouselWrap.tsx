@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Heading3 } from './styles/theme';
 
 const Section = styled.section`
+	height: 42rem;
 	margin: 4rem 3rem 0 3rem;
 `;
 const H3 = styled.h3`
