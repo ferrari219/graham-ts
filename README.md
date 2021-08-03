@@ -24,5 +24,24 @@
 
 -   [ ] Home
 -   [ ] Detail
+        ** home **
+        Recent Works(portfolio)
+        Tab(career)
+
+** Iam **
+iam
+ㄴname
+ㄴskill
+ㄴemail
+
+** Career **
+livart
+jobkorea
+pulip
+him
+p4line
+
+** Portfolio **
+livart
 
 ## Trouble Shooting experience

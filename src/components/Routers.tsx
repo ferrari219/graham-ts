@@ -7,6 +7,9 @@ import {
 } from 'react-router-dom';
 import Home from 'routers/Home';
 import Detail from 'routers/Detail';
+import Iam from 'routers/Iam';
+import Career from 'routers/Career';
+import Portfolio from 'routers/Portfolio';
 
 const Routers = () => {
 	return (
@@ -14,6 +17,10 @@ const Routers = () => {
 			<Switch>
 				<Route path="/" exact component={Home} />
 				<Route path="/detail/:id" component={Detail} />
+				<Route path="/iam" component={Iam} />
+				<Route path="/career" component={Career} />
+				<Route path="/portfolio" component={Portfolio} />
+				<Route path="/portfolio/:id" component={Portfolio} />
 				<Redirect from="*" to="/" />
 			</Switch>
 		</Router>

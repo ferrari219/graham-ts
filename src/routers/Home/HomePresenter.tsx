@@ -5,7 +5,7 @@ import Error from 'components/Error';
 import Headers from 'components/Headers';
 import CarouselWrap from 'components/CarouselWrap';
 import Carousel from 'components/Carousel';
-import Tab from 'components/Tab';
+import TabCareer from 'components/TabCareer';
 
 interface IhomeProps {
 	iam: object | null;
@@ -46,7 +46,7 @@ const HomePresenter: React.FunctionComponent<IhomeProps> = ({
 						<Carousel />
 						{/* {livart && <div>{JSON.stringify(livart)}</div>} */}
 					</CarouselWrap>
-					<Tab {...iam, ...} />
+					<TabCareer {...livart} />
 					{error && <Error error={error} />}
 					{/* <div>{JSON.stringify(iam)}</div> */}
 					{/* <div>{JSON.stringify(contact)}</div> */}
