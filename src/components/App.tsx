@@ -30,9 +30,9 @@ const App = () => {
 				<Routers />
 				<GlobalStyle />
 			</Section>
-			<ReferDiv>
+			{/* <ReferDiv>
 				<img src={Refer} alt="refer" />
-			</ReferDiv>
+			</ReferDiv> */}
 		</>
 	);
 };

@@ -6,6 +6,9 @@ const Wrap = styled.div`
 	width: 18rem;
 	height: 30rem;
 	/* background-color: red; */
+	& + div {
+		margin: 0 1rem;
+	}
 `;
 const Pic = styled.div`
 	overflow: hidden;

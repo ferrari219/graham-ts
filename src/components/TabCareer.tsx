@@ -1,66 +1,53 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { SrOnly } from 'components/styles/globalStyle';
+import refer from 'assets/img/livart/thumb3.jpg';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
-const Section = styled.section`
-	margin-top: -2rem;
-	padding: 0 3rem;
-	/* background: red; */
-`;
-const Sronly = styled.h3`
-	${SrOnly}
-`;
-const Tab = styled.div`
+const Div = styled.div`
 	display: flex;
 	flex-direction: row;
-	padding: 1rem;
-	background: ${({ theme }) => theme.colors.grayF};
-	border-radius: 4rem;
-	color: ${({ theme }) => theme.colors.gray9};
-	a {
-		display: block;
+	padding: 2rem 0;
+	p {
+		flex: 0 6rem;
+		img {
+			width: 100%;
+			border-radius: 0.5rem;
+			box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
+			/* opacity: 0.2; */
+		}
+	}
+	dl {
 		flex: 1;
-		text-align: center;
+		padding: 1rem 2rem;
+		dt {
+			padding: 0.5rem 0;
+			font-size: ${({ theme }) => theme.fonts.size.base};
+			font-weight: ${({ theme }) => theme.fonts.weight.bold};
+			color: ${({ theme }) => theme.colors.gray3};
+		}
+		dd {
+			font-size: ${({ theme }) => theme.fonts.size.sm};
+			line-height: 2rem;
+			color: ${({ theme }) => theme.colors.gray6};
+		}
 	}
 `;
 
-interface ItabcareerProps {
-	company?: string;
-	project?: Array<{
-		title: string;
-		detail: string;
-		lnk: string;
-	}>;
-}
-
-const TabCareer: React.FunctionComponent<ItabcareerProps> = ({
-	company,
-	project,
-}) => {
-	// console.log(company);
-	// console.log(project[0].title);
+const TabCareer = () => {
 	return (
-		<Section>
-			<Tab>
-				<Link to="/iam">I am</Link>
-				<Link to="/career">Career</Link>
-				<Link to="/portfolio">Portfolio</Link>
-			</Tab>
-			<Sronly>Career</Sronly>
-			<div>
-				<div>
-					<Link to="/career/123">
-						<p>사진</p>
-						<dl>
-							<dt>프로젝트명</dt>
-							<dd>완료일</dd>
-						</dl>
-					</Link>
-				</div>
-				{/* {project && project.map((item) => <div>{item.title}</div>)} */}
-			</div>
-		</Section>
+		<Link to="/career/123">
+			<Div>
+				<p>
+					<img src={refer} alt="" />
+				</p>
+				<dl>
+					<dt>버스커 모바일웹 (사이드프로젝트)</dt>
+					<dd>
+						지인들과 제작한 사이드 프로젝트, 기획+디자인+프론트엔드
+					</dd>
+				</dl>
+			</Div>
+		</Link>
 	);
 };
 

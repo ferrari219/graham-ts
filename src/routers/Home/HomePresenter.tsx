@@ -5,8 +5,14 @@ import Error from 'components/Error';
 import Headers from 'components/Headers';
 import CarouselWrap from 'components/CarouselWrap';
 import Carousel from 'components/Carousel';
-import TabCareer from 'components/TabCareer';
+import TabCareers from 'components/TabCareers';
+import styled from 'styled-components';
+import bg from 'assets/img/bg.jpg';
 
+const Main = styled.main`
+	background: url(${bg});
+	background-size: contain;
+`;
 interface IhomeProps {
 	iam: object | null;
 	// myname: string | null;
@@ -40,17 +46,18 @@ const HomePresenter: React.FunctionComponent<IhomeProps> = ({
 			{loading ? (
 				<Loader />
 			) : (
-				<main>
+				<Main>
 					{iam && <Headers {...iam} />}
 					<CarouselWrap title="Recent Works">
 						<Carousel />
-						{/* {livart && <div>{JSON.stringify(livart)}</div>} */}
+						<Carousel />
+						<Carousel />
 					</CarouselWrap>
-					<TabCareer {...livart} />
+					<TabCareers {...livart} />
 					{error && <Error error={error} />}
 					{/* <div>{JSON.stringify(iam)}</div> */}
 					{/* <div>{JSON.stringify(contact)}</div> */}
-				</main>
+				</Main>
 			)}
 		</>
 	);

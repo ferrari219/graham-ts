@@ -11,7 +11,7 @@ const Section = styled.header`
 	flex-direction: row;
 	width: 100%;
 	height: 5rem;
-	margin-top: 4rem;
+	padding-top: 4rem;
 	padding: 0 2rem;
 `;
 const NameArea = styled.div`
