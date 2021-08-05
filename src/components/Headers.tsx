@@ -3,9 +3,6 @@ import styled from 'styled-components';
 import me from 'assets/img/me.png';
 import { ReactComponent as MenuIcon } from 'assets/svg/menu.svg';
 import RightMenu from './RightMenu';
-interface IheaderProps {
-	myname?: string;
-}
 
 const Section = styled.header`
 	display: flex;
@@ -66,6 +63,16 @@ const Menu = styled.div`
 	}
 `;
 
+const handleMenuBtn = (e: React.SyntheticEvent<EventTarget>) => {
+	e.preventDefault();
+	// console.log('메뉴ON');
+	const nav = document.querySelector('nav > div');
+	// nav.addClass('is-active');
+};
+interface IheaderProps {
+	myname?: string;
+}
+
 const Headers: React.FunctionComponent<IheaderProps> = ({ myname }) => {
 	// console.log(myname);
 	return (
@@ -77,7 +84,7 @@ const Headers: React.FunctionComponent<IheaderProps> = ({ myname }) => {
 				<strong>{myname}</strong>
 			</NameArea>
 			<Menu>
-				<button>
+				<button onClick={handleMenuBtn}>
 					<MenuIcon />
 				</button>
 				<nav>
