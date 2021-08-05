@@ -7,22 +7,16 @@
 	"project": [
 		{
 			"title": "코스모폴리탄 리뉴얼",
-			"titleEn": "Cosmopolitan Renewal",
-			"detail": "전 페이지 디자인 및 코딩",
-			"detailEn": "Full-page design and coding"
+			"detail": "전 페이지 디자인 및 코딩"
 		},
 		{
 			"title": "박카스D 리뉴얼",
-			"titleEn": "Bacchus Renewal",
 			"detail": "GDWEB winner prize, 사내 우수사원 포상, 전 페이지 디자인 및 코딩",
-			"detailEn": "Reward for outstanding employees in the company, design and coding of all pages",
 			"lnk": "http://www.gdweb.co.kr/sub/view.asp?displayrow=60&Txt_key=all&Txt_word=&Txt_agnumber=&Txt_fgbn=5&Txt_bcode1=&Txt_gbflag=&Txt_bcode2=030710001&Txt_bcode3=&Txt_bcode4=&Txt_bcode5=&Page=28&str_no=1000"
 		},
 		{
 			"title": "교통안전공단 리뉴얼",
-			"titleEn": "Renewal of Korea Transportation Safety Authority",
-			"detail": "서브 페이지 디자인 및 전 페이지 코딩",
-			"detailEn": "Sub-page design and full-page coding"
+			"detail": "서브 페이지 디자인 및 전 페이지 코딩"
 		}
 	]
 }

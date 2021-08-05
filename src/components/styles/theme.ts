@@ -2,11 +2,12 @@ import { css } from 'styled-components';
 
 const fonts = {
 	family: {
-		base: `AppleSDGothicNeo-Light, Roboto, NotoSansKR, 'Noto+Sans', 'Malgun Gothic', '맑은 고딕', sans-serif`,
+		base: `AppleSDGothicNeo-Regular, Roboto, NotoSansKR, 'Noto+Sans', 'Malgun Gothic', '맑은 고딕', sans-serif`,
 	},
 	size: {
 		sm: '1.4rem',
 		base: '1.6rem',
+		md: '1.8rem',
 		lg: '2rem',
 		xl: '2.5rem',
 		title: '6rem',

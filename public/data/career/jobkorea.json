@@ -6,23 +6,17 @@
 	"jobEn": "Design team Web Designer & Coder",
 	"project": [
 		{
-			"title": "알바비책 하이브리드 앱 제작",
-			"titleEn": "Create a part-time book hybrid app",
+			"name": "알바비책 하이브리드 앱 제작",
 			"detail": "photoshop, html, css, javascript, jquery 사용",
-			"detailEn": "photoshop, html, css, javascript, jquery",
 			"lnk": "https://www.sktinsight.com/34700"
 		},
 		{
-			"title": "포털 내 전체 팝업 개편",
-			"titleEn": "Renewal the entire pop-up in the portal",
-			"detail": "photoshop, html, css, javascript, jquery 사용",
-			"detailEn": "photoshop, html, css, javascript, jquery"
+			"name": "포털 내 전체 팝업 개편",
+			"detail": "photoshop, html, css, javascript, jquery 사용"
 		},
 		{
-			"title": "통합검색 페이지 개편",
-			"titleEn": "Renewal the Integrated Search page",
-			"detail": "photoshop, html, css, javascript, jquery 사용",
-			"detailEn": "photoshop, html, css, javascript, jquery"
+			"name": "통합검색 페이지 개편",
+			"detail": "photoshop, html, css, javascript, jquery 사용"
 		}
 	]
 }

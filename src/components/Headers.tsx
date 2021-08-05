@@ -10,9 +10,8 @@ const Section = styled.header`
 	display: flex;
 	flex-direction: row;
 	width: 100%;
-	height: 5rem;
-	padding-top: 4rem;
-	padding: 0 2rem;
+	height: 9rem;
+	padding: 3rem 2rem 1rem 2rem;
 `;
 const NameArea = styled.div`
 	flex: 1;
@@ -30,11 +29,16 @@ const NameArea = styled.div`
 			border-radius: 50%;
 		}
 	}
+	strong {
+		font-weight: ${({ theme }) => theme.fonts.weight.bold};
+		font-size: ${({ theme }) => theme.fonts.size.sm};
+		letter-spacing: 0;
+	}
 `;
 const Menu = styled.div`
 	flex: 0 5rem;
 	display: flex;
-	justify-content: center;
+	justify-content: flex-end;
 	align-items: center;
 	/* background-color: blue; */
 	button {
@@ -43,9 +47,10 @@ const Menu = styled.div`
 		background-color: transparent;
 		border: none;
 		svg {
-			width: 100%;
+			width: 2.2rem;
 			height: auto;
 			fill: ${({ theme }) => theme.colors.grayC};
+			font-size: ${({ theme }) => theme.fonts.size.base};
 		}
 	}
 `;

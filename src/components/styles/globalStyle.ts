@@ -4,6 +4,8 @@ import reset from 'styled-reset';
 const global = createGlobalStyle`
     ${reset};
 	html {
+        overflow-x: hidden;
+        display:block;
         font-size: 62.5%;
         box-sizing: border-box;
         * {
@@ -11,8 +13,9 @@ const global = createGlobalStyle`
         }
     }
 	body {
-        /* background: #141414; */
-        background: #141414;
+        max-width: 89rem;
+        margin: 0 auto;
+        background-color: #141414;
         a{
             text-decoration: none;
             color: inherit;
@@ -21,7 +24,7 @@ const global = createGlobalStyle`
         /*******************************************************************
         font
         ********************************************************************/
-		font-family: AppleSDGothicNeo-Light, Roboto, NotoSansKR, 'Noto+Sans', 'Malgun Gothic', '맑은 고딕', sans-serif;
+		font-family: AppleSDGothicNeo-Regular, Roboto, NotoSansKR, 'Noto+Sans', 'Malgun Gothic', '맑은 고딕', sans-serif;
         font-size: 1.8rem;
         line-height: 1.5;
         letter-spacing: -0.08rem;

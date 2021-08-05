@@ -14,10 +14,11 @@ const Pic = styled.div`
 	overflow: hidden;
 	width: 18rem;
 	height: 25rem;
-	border-radius: 2rem;
+	border-radius: 1rem;
 	opacity: 1;
 	img {
 		width: 100%;
+		box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 	}
 `;
 const Text = styled.div`
@@ -36,15 +37,27 @@ const Text = styled.div`
 	}
 `;
 
-const Carousel: React.FunctionComponent = () => {
+interface IcarouselProps {
+	id: number;
+	name: string;
+	detail: string;
+	lnk: string;
+}
+
+const Carousel: React.FunctionComponent<IcarouselProps> = ({
+	id,
+	name,
+	detail,
+	lnk,
+}) => {
 	return (
 		<Wrap>
 			<Pic>
-				<img src={Refer} alt="refer" />
+				<img src={`assets/img/livart/thumb${id}.jpg`} alt="refer" />
 			</Pic>
 			<Text>
-				<strong>Sample</strong>
-				<span>text</span>
+				<strong>{name}</strong>
+				<span>{detail}</span>
 			</Text>
 		</Wrap>
 	);

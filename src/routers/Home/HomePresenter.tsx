@@ -3,15 +3,14 @@ import React from 'react';
 import Loader from 'components/Loader';
 import Error from 'components/Error';
 import Headers from 'components/Headers';
-import CarouselWrap from 'components/CarouselWrap';
-import Carousel from 'components/Carousel';
-import TabCareers from 'components/TabCareers';
+import Carousels from 'components/Carousels';
+import TabIams from 'components/TabCareers';
 import styled from 'styled-components';
 import bg from 'assets/img/bg.jpg';
 
 const Main = styled.main`
 	background: url(${bg});
-	background-size: contain;
+	background-size: cover;
 `;
 interface IhomeProps {
 	iam: object | null;
@@ -48,12 +47,8 @@ const HomePresenter: React.FunctionComponent<IhomeProps> = ({
 			) : (
 				<Main>
 					{iam && <Headers {...iam} />}
-					<CarouselWrap title="Recent Works">
-						<Carousel />
-						<Carousel />
-						<Carousel />
-					</CarouselWrap>
-					<TabCareers {...livart} />
+					<Carousels title="Recent Works" {...livart} />
+					<TabIams {...livart} />
 					{error && <Error error={error} />}
 					{/* <div>{JSON.stringify(iam)}</div> */}
 					{/* <div>{JSON.stringify(contact)}</div> */}
