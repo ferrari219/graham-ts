@@ -8,5 +8,8 @@
 	"FrontendSkill": ["React", "ES6", "styled-components", "SASS", "html"],
 	"DesignSkill": ["Figma", "Adobe XD", "Photoshop"],
 	"BackendSkill": ["Node Express", "MySql"],
-	"EtcSkill": ["gulp", "jQuery", "github", "gitlab"]
+	"EtcSkill": ["gulp", "jQuery", "github", "gitlab"],
+	"email": "grahamsnum@gmail.com",
+	"github": "https://github.com/ferrari219",
+	"homepage": "ferrari219.github.io"
 }
