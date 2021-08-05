@@ -7,21 +7,15 @@
 	"project": [
 		{
 			"title": "EXR 마이크로사이트 ProgressiveSchool 리뉴얼 ",
-			"titleEn": "Renewal of EXR microsite Progressive School",
-			"detail": "전페이지 디자인 및 코딩",
-			"detailEn": "Designing and coding full-pages"
+			"detail": "전페이지 디자인 및 코딩"
 		},
 		{
 			"title": "놀부 브랜드 리뉴얼",
-			"titleEn": "Renewal Nolbu Brand",
-			"detail": "서브페이지 디자인 및 전페이지 코딩",
-			"detailEn": "Sub-page design and full-page coding"
+			"detail": "서브페이지 디자인 및 전페이지 코딩"
 		},
 		{
 			"title": "HAZZYS 리뉴얼",
-			"titleEn": "HAZZYS Renewals",
-			"detail": "서브페이지 코딩",
-			"detailEn": "Subpage coding"
+			"detail": "서브페이지 코딩"
 		}
 	]
 }
