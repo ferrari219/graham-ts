@@ -5,7 +5,7 @@ import Carousel from 'components/Carousel';
 
 const Section = styled.section`
 	overflow: hidden;
-	height: 45rem;
+	height: 42rem;
 	padding: 2rem 3rem 0 3rem;
 `;
 const H3 = styled.h3`

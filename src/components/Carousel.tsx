@@ -1,13 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 import Refer from 'assets/img/refer.jpg';
+import { Link } from 'react-router-dom';
 
 const Wrap = styled.div`
 	width: 18rem;
 	height: 30rem;
 	/* background-color: red; */
 	& + div {
-		margin: 0 1rem;
+		margin: 0 2rem;
 	}
 `;
 const Pic = styled.div`
@@ -25,13 +26,13 @@ const Text = styled.div`
 	margin-top: 2rem;
 	strong {
 		display: block;
-		font-size: ${({ theme }) => theme.fonts.size.lg};
+		font-size: ${({ theme }) => theme.fonts.size.md};
 		font-weight: ${({ theme }) => theme.fonts.weight.bold};
 		color: ${({ theme }) => theme.colors.grayC};
 	}
 	span {
 		display: block;
-		font-size: ${({ theme }) => theme.fonts.size.base};
+		font-size: ${({ theme }) => theme.fonts.size.sm};
 		font-weight: ${({ theme }) => theme.fonts.weight.normal};
 		color: ${({ theme }) => theme.colors.gray9};
 	}
@@ -52,13 +53,18 @@ const Carousel: React.FunctionComponent<IcarouselProps> = ({
 }) => {
 	return (
 		<Wrap>
-			<Pic>
-				<img src={`assets/img/livart/thumb${id}.jpg`} alt="refer" />
-			</Pic>
-			<Text>
-				<strong>{name}</strong>
-				<span>{detail}</span>
-			</Text>
+			<Link to="/:id">
+				<Pic>
+					<img
+						src={`https://ferrari219.github.io/graham-ts/data/img/livart/thumb${id}.jpg`}
+						alt="refer"
+					/>
+				</Pic>
+				<Text>
+					<strong>{name}</strong>
+					{/* <span>{detail}</span> */}
+				</Text>
+			</Link>
 		</Wrap>
 	);
 };

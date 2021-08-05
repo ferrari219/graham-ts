@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import me from 'assets/img/me.png';
 import { ReactComponent as MenuIcon } from 'assets/svg/menu.svg';
+import RightMenu from './RightMenu';
 interface IheaderProps {
 	myname?: string;
 }
@@ -53,6 +54,16 @@ const Menu = styled.div`
 			font-size: ${({ theme }) => theme.fonts.size.base};
 		}
 	}
+	nav {
+		position: fixed;
+		right: -100%;
+		top: 0;
+		z-index: 99;
+		transition: right 0.2s;
+		&.is-active {
+			right: 0;
+		}
+	}
 `;
 
 const Headers: React.FunctionComponent<IheaderProps> = ({ myname }) => {
@@ -69,13 +80,9 @@ const Headers: React.FunctionComponent<IheaderProps> = ({ myname }) => {
 				<button>
 					<MenuIcon />
 				</button>
-				{/* <nav>
-					<ul>
-						<li>
-							<a href="#">하위메뉴</a>
-						</li>
-					</ul>
-				</nav> */}
+				<nav>
+					<RightMenu />
+				</nav>
 			</Menu>
 		</Section>
 	);

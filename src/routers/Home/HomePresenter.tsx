@@ -10,7 +10,7 @@ import bg from 'assets/img/bg.jpg';
 
 const Main = styled.main`
 	background: url(${bg});
-	background-size: cover;
+	background-size: contain;
 `;
 interface IhomeProps {
 	iam: object | null;
