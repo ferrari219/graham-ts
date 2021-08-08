@@ -66,8 +66,9 @@ const Menu = styled.div`
 const handleMenuBtn = (e: React.SyntheticEvent<EventTarget>) => {
 	e.preventDefault();
 	// console.log('메뉴ON');
-	const nav = document.querySelector('nav > div');
-	// nav.addClass('is-active');
+	const nav = document.querySelector('nav') as HTMLParagraphElement;
+	// console.log(nav);
+	nav.classList.add('is-active');
 };
 interface IheaderProps {
 	myname?: string;
