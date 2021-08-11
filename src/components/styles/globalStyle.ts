@@ -24,7 +24,7 @@ const global = createGlobalStyle`
         /*******************************************************************
         font
         ********************************************************************/
-		font-family: AppleSDGothicNeo-Regular, Roboto, NotoSansKR, 'Noto+Sans', 'Malgun Gothic', '맑은 고딕', sans-serif;
+		font-family: Roboto, AppleSDGothicNeo-Regular, NotoSansKR, 'Noto+Sans', 'Malgun Gothic', '맑은 고딕', sans-serif;
         font-size: 1.8rem;
         line-height: 1.5;
         letter-spacing: -0.08rem;
