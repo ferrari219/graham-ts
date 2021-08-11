@@ -1,5 +1,19 @@
 {
-    "iam": "/iam",
-    "career": "/career",
-    "portfolio": "/portfolio"
+    "category": [
+        {
+            "id": 0,
+            "name": "Iam...",
+            "lnk": "/iam"
+        },
+        {
+            "id": 1,
+            "name": "Career",
+            "lnk": "/career"
+        },
+        {
+            "id": 2,
+            "name": "Portfolio",
+            "lnk": "/portfolio"
+        }
+    ]
 }
