@@ -1,0 +1,14 @@
+{
+    "iam": {
+        "lnk": "/iam",
+        "sub": {
+            "skill": "/"
+        }
+    },
+    "career": {
+        "lnk": "/career"
+    },
+    "portfolio": {
+        "lnk": "/portfolio"
+    }
+}
