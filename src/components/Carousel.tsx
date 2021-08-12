@@ -4,18 +4,18 @@ import Refer from 'assets/img/refer.jpg';
 import { Link } from 'react-router-dom';
 
 const Wrap = styled.div`
-	width: 18rem;
-	height: 30rem;
+	/* width: 18rem; */
+	height: 33rem;
 	/* background-color: red; */
 	& + div {
-		margin: 0 2rem;
+		margin: 0 3rem;
 	}
 `;
 const Pic = styled.div`
 	overflow: hidden;
-	width: 18rem;
-	height: 25rem;
-	border-radius: 1rem;
+	width: 17rem;
+	height: 28rem;
+	border-radius: 2rem;
 	opacity: 1;
 	img {
 		width: 100%;
@@ -39,7 +39,7 @@ const Text = styled.div`
 `;
 
 interface IcarouselProps {
-	id: number;
+	id?: number;
 	name: string;
 	detail: string;
 	lnk: string;

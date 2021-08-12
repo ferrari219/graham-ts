@@ -5,7 +5,7 @@ import Carousel from 'components/Carousel';
 
 const Section = styled.section`
 	overflow: hidden;
-	height: 42rem;
+	height: 45rem;
 	padding: 2rem 3rem 0 3rem;
 `;
 const H3 = styled.h3`
@@ -35,6 +35,7 @@ const CarouselList: React.FunctionComponent<IcarouselProps> = ({
 		<Section>
 			<H3>{title}</H3>
 			<CarouselItems>
+				{/* <Carousel name="sample" detail="sampletext" lnk="naver.com" /> */}
 				{project &&
 					[...project]
 						.reverse()

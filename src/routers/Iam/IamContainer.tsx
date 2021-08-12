@@ -1,7 +1,8 @@
 import React from 'react';
+import IamPresenter from './IamPresenter';
 
 const IamContainer = () => {
-	return <div>IamContainer</div>;
+	return <IamPresenter />;
 };
 
 export default IamContainer;
