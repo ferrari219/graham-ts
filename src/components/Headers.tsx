@@ -4,6 +4,7 @@ import me from 'assets/img/me.png';
 import { ReactComponent as BackIcon } from 'assets/svg/back.svg';
 import { ReactComponent as MenuIcon } from 'assets/svg/menu.svg';
 import RightMenus from 'components/RightMenus';
+import { RouteComponentProps, withRouter } from 'react-router-dom';
 
 const Header = styled.header`
 	display: flex;
@@ -44,6 +45,10 @@ const InfoArea = styled.div`
 		width: 4rem;
 		height: 4rem;
 		margin-right: 1rem;
+		& + strong {
+			text-align: left;
+			font-size: ${({ theme }) => theme.fonts.size.sm};
+		}
 		img {
 			width: 100%;
 			height: auto;
@@ -51,8 +56,10 @@ const InfoArea = styled.div`
 		}
 	}
 	strong {
+		flex: 1;
+		text-align: center;
 		font-weight: ${({ theme }) => theme.fonts.weight.bold};
-		font-size: ${({ theme }) => theme.fonts.size.sm};
+		font-size: ${({ theme }) => theme.fonts.size.base};
 		letter-spacing: 0;
 	}
 `;
@@ -100,26 +107,41 @@ const handleBackBtn = (e: React.SyntheticEvent<EventTarget>) => {
 	e.preventDefault();
 	window.history.back();
 };
+
 interface IheaderProps {
 	myname?: string;
+	current?: string;
+}
+interface PathParamsProps {
+	id: string;
 }
 
-const Headers: React.FunctionComponent<IheaderProps> = ({ myname }) => {
-	// console.log(myname);
+const Headers: React.FunctionComponent<
+	IheaderProps & RouteComponentProps<PathParamsProps>
+> = ({ myname, current = '/', match: { path } }) => {
+	// { match: { path } }
+	// console.log(path);
 	return (
 		<Header>
-			<Left>
-				<button onClick={handleBackBtn}>
-					<BackIcon />
-				</button>
-			</Left>
-			<InfoArea>
-				{/* <p>
-					<img src={me} alt="My Profile img" />
-				</p>
-				<strong>{myname}</strong> */}
-				<strong>test</strong>
-			</InfoArea>
+			{path === '/' ? (
+				<InfoArea>
+					<p>
+						<img src={me} alt="My Profile img" />
+					</p>
+					<strong>{myname}</strong>
+				</InfoArea>
+			) : (
+				<>
+					<Left>
+						<button onClick={handleBackBtn}>
+							<BackIcon />
+						</button>
+					</Left>
+					<InfoArea>
+						<strong>{current}</strong>
+					</InfoArea>
+				</>
+			)}
 			<Right>
 				<button onClick={handleMenuBtn}>
 					<MenuIcon />
@@ -132,4 +154,4 @@ const Headers: React.FunctionComponent<IheaderProps> = ({ myname }) => {
 	);
 };
 
-export default Headers;
+export default withRouter(Headers);

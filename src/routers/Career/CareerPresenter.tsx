@@ -6,7 +6,7 @@ import Headers from 'components/Headers';
 const CareerPresenter = () => {
 	return (
 		<div>
-			<Headers />
+			<Headers current="Career" />
 		</div>
 	);
 };
