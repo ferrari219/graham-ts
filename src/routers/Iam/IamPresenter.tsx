@@ -2,7 +2,7 @@ import React from 'react';
 import Loader from 'components/Loader';
 import Error from 'components/Error';
 import Headers from 'components/Headers';
-import ColumnBox1 from 'components/ColumnBox1';
+import ColumnBox1 from 'components/Profile';
 
 // "title": "Graham's",
 // "myname": "Sung-ho Jeon",
