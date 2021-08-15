@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { Profiler } from 'react';
 import Loader from 'components/Loader';
 import Error from 'components/Error';
 import Headers from 'components/Headers';
-import ColumnBox1 from 'components/Profile';
+import ColumnBox from 'components/ColumnBox';
+import Profile from 'components/Profile';
 
 // "title": "Graham's",
 // "myname": "Sung-ho Jeon",
@@ -32,8 +33,9 @@ const IamPresenter: React.FunctionComponent<IiamProps> = ({
 	return (
 		<main>
 			<Headers current="I am..." />
-			<section>myname, job, iam</section>
-			<ColumnBox1 {...iam} />
+			<ColumnBox>
+				<Profile {...iam} />
+			</ColumnBox>
 		</main>
 	);
 };

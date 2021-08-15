@@ -29,7 +29,29 @@ const ColumnBox1: React.FunctionComponent<IcolumnboxProps> = ({
 	github,
 	homepage,
 }) => {
-	return <div>ColumnBox1</div>;
+	return (
+		<>
+			<section>
+				<p>사진</p>
+				<dl>
+					<dt>{myname}</dt>
+					<dd>{job}</dd>
+				</dl>
+				<div>
+					<span>
+						<a href={`mailto:{ email }`}>email</a>
+					</span>
+				</div>
+			</section>
+			<section>
+				<dl>
+					<dt>{iam}</dt>
+					<dd>{comment}</dd>
+				</dl>
+			</section>
+			<section></section>
+		</>
+	);
 };
 
 export default ColumnBox1;
