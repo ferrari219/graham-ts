@@ -1,19 +1,20 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { ThemedStyledProps } from 'styled-components';
 import me from 'assets/img/me.png';
 import { ReactComponent as BackIcon } from 'assets/svg/back.svg';
 import { ReactComponent as MenuIcon } from 'assets/svg/menu.svg';
 import RightMenus from 'components/RightMenus';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
 
-const Header = styled.header`
+const Header = styled.header<{ dark?: boolean }>`
 	display: flex;
 	flex-direction: row;
 	width: 100%;
 	height: 9rem;
 	padding: 3rem 2rem 1rem 2rem;
+	color: ${(props) => (props.dark ? '#fff' : '#333')};
 `;
-const Left = styled.div`
+const Left = styled.div<{ dark?: boolean }>`
 	flex: 0 4rem;
 	display: flex;
 	justify-content: flex-start;
@@ -28,10 +29,12 @@ const Left = styled.div`
 		background-color: transparent;
 		border: none;
 		svg {
-			width: 2.2rem;
+			width: 100%;
 			height: auto;
-			fill: ${({ theme }) => theme.colors.grayC};
-			font-size: ${({ theme }) => theme.fonts.size.base};
+			fill: ${(props) =>
+				props.dark
+					? props.theme.colors.grayC
+					: props.theme.colors.gray3};
 		}
 	}
 `;
@@ -63,7 +66,7 @@ const InfoArea = styled.div`
 		letter-spacing: 0;
 	}
 `;
-const Right = styled.div`
+const Right = styled.div<{ dark?: boolean }>`
 	flex: 0 4rem;
 	display: flex;
 	justify-content: flex-end;
@@ -78,10 +81,12 @@ const Right = styled.div`
 		background-color: transparent;
 		border: none;
 		svg {
-			width: 2.2rem;
+			width: 100%;
 			height: auto;
-			fill: ${({ theme }) => theme.colors.grayC};
-			font-size: ${({ theme }) => theme.fonts.size.base};
+			fill: ${(props) =>
+				props.dark
+					? props.theme.colors.grayC
+					: props.theme.colors.gray3};
 		}
 	}
 	nav {
@@ -111,6 +116,7 @@ const handleBackBtn = (e: React.SyntheticEvent<EventTarget>) => {
 interface IheaderProps {
 	myname?: string;
 	current?: string;
+	dark?: boolean;
 }
 interface PathParamsProps {
 	id: string;
@@ -122,16 +128,26 @@ const Headers: React.FunctionComponent<
 	// { match: { path } }
 	// console.log(path);
 	return (
-		<Header>
+		<>
 			{path === '/' ? (
-				<InfoArea>
-					<p>
-						<img src={me} alt="My Profile img" />
-					</p>
-					<strong>{myname}</strong>
-				</InfoArea>
+				<Header dark>
+					<InfoArea>
+						<p>
+							<img src={me} alt="My Profile img" />
+						</p>
+						<strong>{myname}</strong>
+					</InfoArea>
+					<Right dark>
+						<button onClick={handleMenuBtn}>
+							<MenuIcon />
+						</button>
+						<nav>
+							<RightMenus />
+						</nav>
+					</Right>
+				</Header>
 			) : (
-				<>
+				<Header>
 					<Left>
 						<button onClick={handleBackBtn}>
 							<BackIcon />
@@ -140,17 +156,17 @@ const Headers: React.FunctionComponent<
 					<InfoArea>
 						<strong>{current}</strong>
 					</InfoArea>
-				</>
+					<Right>
+						<button onClick={handleMenuBtn}>
+							<MenuIcon />
+						</button>
+						<nav>
+							<RightMenus />
+						</nav>
+					</Right>
+				</Header>
 			)}
-			<Right>
-				<button onClick={handleMenuBtn}>
-					<MenuIcon />
-				</button>
-				<nav>
-					<RightMenus />
-				</nav>
-			</Right>
-		</Header>
+		</>
 	);
 };
 

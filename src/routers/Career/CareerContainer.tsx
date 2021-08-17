@@ -1,6 +1,6 @@
-import { careerApi } from 'api';
 import React, { Component } from 'react';
 import CareerPresenter from './CareerPresenter';
+import { careerApi } from 'api';
 
 interface IcareerState {
 	livart: object | null;
@@ -42,7 +42,9 @@ class CareerContainer extends Component<{}, IcareerState> {
 	render() {
 		const { livart, jobKorea, pulip, him, p4line, loading, error } =
 			this.state;
+		// console.log(loading);
 		return (
+			// <>test</>
 			<CareerPresenter
 				livart={livart}
 				jobKorea={jobKorea}

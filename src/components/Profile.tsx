@@ -1,6 +1,70 @@
 import React from 'react';
+import me from 'assets/img/me.png';
+import styled from 'styled-components';
 
-interface IcolumnboxProps {
+const Wrap = styled.div`
+	padding: 0 3rem;
+	color: ${({ theme }) => theme.colors.gray3};
+`;
+const NameBox = styled.section`
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	p {
+		flex: 0 6rem;
+
+		img {
+			display: block;
+			width: 100%;
+			border-radius: 50%;
+		}
+	}
+	dl {
+		flex: 1;
+		width: 100%;
+		padding: 0 2rem 0.5rem 2rem;
+		/* border: 1px solid red; */
+		dt {
+			font-weight: ${({ theme }) => theme.fonts.weight.bold};
+			font-size: ${({ theme }) => theme.fonts.size.xl};
+			color: ${({ theme }) => theme.colors.gray3};
+			letter-spacing: 0;
+		}
+		dd {
+			font-size: ${({ theme }) => theme.fonts.size.sm};
+			color: ${({ theme }) => theme.colors.gray9};
+			letter-spacing: 0;
+		}
+	}
+`;
+const GreetingBox = styled.section`
+	margin: 2rem 0;
+	padding: 2rem;
+	/* border: 1px solid #fff; */
+	background-color: #4dbfc0;
+	border-radius: 1rem;
+	word-break: keep-all;
+	dt {
+		padding-bottom: 0.5rem;
+		font-weight: ${({ theme }) => theme.fonts.weight.bold};
+		font-size: ${({ theme }) => theme.fonts.size.lg};
+		color: ${({ theme }) => theme.colors.grayF};
+	}
+	dd {
+		font-size: ${({ theme }) => theme.fonts.size.sm};
+		color: ${({ theme }) => theme.colors.grayF};
+		opacity: 0.8;
+	}
+`;
+const ContactBox = styled.section`
+	padding: 2rem;
+	border: 1px solid ${({ theme }) => theme.colors.grayC};
+	border-radius: 1rem;
+	font-size: ${({ theme }) => theme.fonts.size.sm};
+	color: ${({ theme }) => theme.colors.gray6};
+	letter-spacing: 0;
+`;
+interface IprofileProps {
 	myname?: string | null;
 	job?: string | null;
 	iam?: string | null;
@@ -15,7 +79,7 @@ interface IcolumnboxProps {
 	homepage?: string | null;
 }
 
-const ColumnBox1: React.FunctionComponent<IcolumnboxProps> = ({
+const Profile: React.FunctionComponent<IprofileProps> = ({
 	myname,
 	job,
 	iam,
@@ -30,28 +94,37 @@ const ColumnBox1: React.FunctionComponent<IcolumnboxProps> = ({
 	homepage,
 }) => {
 	return (
-		<>
-			<section>
-				<p>사진</p>
-				<dl>
-					<dt>{myname}</dt>
-					<dd>{job}</dd>
-				</dl>
-				<div>
-					<span>
-						<a href={`mailto:{ email }`}>email</a>
-					</span>
-				</div>
-			</section>
-			<section>
-				<dl>
-					<dt>{iam}</dt>
-					<dd>{comment}</dd>
-				</dl>
-			</section>
-			<section></section>
-		</>
+		<Wrap>
+			{myname && (
+				<NameBox>
+					<p>
+						<img src={me} alt="My Profile img" />
+					</p>
+					<dl>
+						<dt>{myname}</dt>
+						<dd>{job}</dd>
+					</dl>
+				</NameBox>
+			)}
+
+			{iam && (
+				<GreetingBox>
+					<dl>
+						<dt>{iam}</dt>
+						<dd>{comment}</dd>
+					</dl>
+				</GreetingBox>
+			)}
+			{github && (
+				<ContactBox>
+					<ul>
+						<li>{github}</li>
+						<li>{email}</li>
+					</ul>
+				</ContactBox>
+			)}
+		</Wrap>
 	);
 };
 
-export default ColumnBox1;
+export default Profile;
