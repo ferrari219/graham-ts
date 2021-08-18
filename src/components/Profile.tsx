@@ -123,14 +123,62 @@ const Profile: React.FunctionComponent<IprofileProps> = ({
           </ul>
         </ContactBox>
       )}
-      {FrontendSkill && <div>
-        <ul>
-        {FrontendSkill.map(item =>
-      <li><img src={`https://ferrari219.github.io/graham-ts/data/img/skill/sk_${item}.png`} alt={item}/></li>
-)}
-      </ul>
-      </div>
-      }
+      {FrontendSkill && (
+        <div>
+          <ul>
+            {FrontendSkill.map((item) => (
+              <li>
+                <img
+                  src={`https://ferrari219.github.io/graham-ts/data/img/skill/sk_${item}.png`}
+                  alt={item}
+                />
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+      {DesignSkill && (
+        <div>
+          <ul>
+            {DesignSkill.map((item) => (
+              <li>
+                <img
+                  src={`https://ferrari219.github.io/graham-ts/data/img/skill/sk_${item}.png`}
+                  alt={item}
+                />
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+      {BackendSkill && (
+        <div>
+          <ul>
+            {BackendSkill.map((item) => (
+              <li>
+                <img
+                  src={`https://ferrari219.github.io/graham-ts/data/img/skill/sk_${item}.png`}
+                  alt={item}
+                />
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+      {EtcSkill && (
+        <div>
+          <ul>
+            {EtcSkill.map((item) => (
+              <li>
+                <img
+                  src={`https://ferrari219.github.io/graham-ts/data/img/skill/sk_${item}.png`}
+                  alt={item}
+                />
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </Wrap>
   );
 };

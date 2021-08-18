@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { ThemedStyledProps } from 'styled-components';
+import styled from 'styled-components';
 import me from 'assets/img/me.png';
 import { ReactComponent as BackIcon } from 'assets/svg/back.svg';
 import { ReactComponent as MenuIcon } from 'assets/svg/menu.svg';

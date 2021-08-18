@@ -6,33 +6,33 @@ import Profile from 'components/Profile';
 import styled from 'styled-components';
 
 const Main = styled.main`
-	min-height: 100vh;
-	background-color: ${({ theme }) => theme.colors.grayF}; ;
+  // min-height: 100vh;
+  background-color: ${({ theme }) => theme.colors.grayF}; ;
 `;
 interface IiamProps {
-	iam: object | null;
-	loading: boolean;
-	error: string | null;
+  iam: object | null;
+  loading: boolean;
+  error: string | null;
 }
 
 const IamPresenter: React.FunctionComponent<IiamProps> = ({
-	iam,
-	loading,
-	error,
+  iam,
+  loading,
+  error,
 }) => {
-	return (
-		<>
-			{loading ? (
-				<Loader />
-			) : (
-				<Main>
-					<Headers current="I am..." dark={true} />
-					<Profile {...iam} />
-					{error && <Error error={error} />}
-				</Main>
-			)}
-		</>
-	);
+  return (
+    <>
+      {loading ? (
+        <Loader />
+      ) : (
+        <Main>
+          <Headers current="I am..." dark={true} />
+          <Profile {...iam} />
+          {error && <Error error={error} />}
+        </Main>
+      )}
+    </>
+  );
 };
 
 export default IamPresenter;

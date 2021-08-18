@@ -2,11 +2,13 @@ import React from 'react';
 import Loader from 'components/Loader';
 import Error from 'components/Error';
 import Headers from 'components/Headers';
+import CareerItems from 'components/CareerItems';
 import styled from 'styled-components';
 
 const Main = styled.main`
 	min-height: 100vh;
-	background-color: ${({ theme }) => theme.colors.grayF}; ;
+	background-color: ${({ theme }) => theme.colors.grayF};
+	color: ${({ theme }) => theme.colors.gray3};
 `;
 interface IcareerProps {
 	livart: object | null;
@@ -27,6 +29,7 @@ const CareerPresenter: React.FunctionComponent<IcareerProps> = ({
 	loading,
 	error,
 }) => {
+	console.log(livart);
 	return (
 		<>
 			{loading ? (
@@ -34,6 +37,11 @@ const CareerPresenter: React.FunctionComponent<IcareerProps> = ({
 			) : (
 				<Main>
 					<Headers current="Career" />
+					<CareerItems {...livart}/>
+					{/* <CareerItems {...jobkorea}/>
+					<CareerItems {...pulip}/>
+					<CareerItems {...him}/>
+					<CareerItems {...p4line}/> */}
 					{error && <Error error={error} />}
 				</Main>
 			)}
