@@ -70,10 +70,10 @@ interface IprofileProps {
   iam?: string | null;
   comment?: string | null;
   birth?: string | null;
-  FrontendSkill?: object | null;
-  DesignSkill?: object | null;
-  BackendSkill?: object | null;
-  EtcSkill?: object | null;
+  FrontendSkill?: Array<string> | null;
+  DesignSkill?: Array<string> | null;
+  BackendSkill?: Array<string> | null;
+  EtcSkill?: Array<string> | null;
   email?: string | null;
   github?: string | null;
   homepage?: string | null;
@@ -123,7 +123,14 @@ const Profile: React.FunctionComponent<IprofileProps> = ({
           </ul>
         </ContactBox>
       )}
-      {FrontendSkill && <div>{FrontendSkill}</div>}
+      {FrontendSkill && <div>
+        <ul>
+        {FrontendSkill.map(item =>
+      <li><img src={`https://ferrari219.github.io/graham-ts/data/img/skill/sk_${item}.png`} alt={item}/></li>
+)}
+      </ul>
+      </div>
+      }
     </Wrap>
   );
 };
