@@ -127,29 +127,29 @@ const Profiles: React.FunctionComponent<IprofilesProps> = ({
 			)}
 			{FrontendSkill && (
 				<ProfileItems title="Frontend Skill">
-					{FrontendSkill.map((item) => (
-						<ProfileItem item={item} />
+					{FrontendSkill.map((item, index) => (
+						<ProfileItem item={item} key={index} />
 					))}
 				</ProfileItems>
 			)}
 			{DesignSkill && (
 				<ProfileItems title="Design Skill">
-					{DesignSkill.map((item) => (
-						<ProfileItem item={item} />
+					{DesignSkill.map((item, index) => (
+						<ProfileItem item={item} key={index} />
 					))}
 				</ProfileItems>
 			)}
 			{BackendSkill && (
 				<ProfileItems title="Backend Skill">
-					{BackendSkill.map((item) => (
-						<ProfileItem item={item} />
+					{BackendSkill.map((item, index) => (
+						<ProfileItem item={item} key={index} />
 					))}
 				</ProfileItems>
 			)}
 			{EtcSkill && (
 				<ProfileItems title="Etc Skill">
-					{EtcSkill.map((item) => (
-						<ProfileItem item={item} />
+					{EtcSkill.map((item, index) => (
+						<ProfileItem item={item} key={index} />
 					))}
 				</ProfileItems>
 			)}

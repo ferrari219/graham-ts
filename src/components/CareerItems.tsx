@@ -89,7 +89,9 @@ const CareerItems: React.FunctionComponent<IcareerProps> = ({
 					{project &&
 						[...project]
 							.reverse()
-							.map((item) => <p>{item.name}</p>)}
+							.map((item, index) => (
+								<p key={index}>{item.name}</p>
+							))}
 				</Project>
 			</Wrap>
 		</Careers>
