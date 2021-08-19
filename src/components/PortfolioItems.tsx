@@ -2,9 +2,10 @@ import React from 'react';
 // import { Link } from 'react-router-dom';
 import { SrOnly } from 'components/styles/globalStyle';
 import styled from 'styled-components';
+import PortfolioItem from './PortfolioItem';
 
 const Section = styled.section`
-	margin-top: -2rem;
+	padding: 0 2rem;
 	/* background: red; */
 `;
 const Sronly = styled.h3`
@@ -31,17 +32,11 @@ const PortfolioItems: React.FunctionComponent<IportfolioitemsProps> = ({
 }) => {
 	return (
 		<Section>
-			<Sronly>Career</Sronly>
+			<Sronly>Portfolio</Sronly>
 			<div>
 				{project &&
 					[...project].map((item, index) => (
-						<div key={index}>
-							<p>사진</p>
-							<dl>
-								<dt>{item.name}</dt>
-								<dd>{item.detail}</dd>
-							</dl>
-						</div>
+						<PortfolioItem {...item} key={index} />
 					))}
 			</div>
 		</Section>

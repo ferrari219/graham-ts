@@ -7,7 +7,8 @@ import PortfolioItems from 'components/PortfolioItems';
 
 const Main = styled.main`
 	min-height: 100vh;
-	background-color: ${({ theme }) => theme.colors.grayF};
+	padding-bottom: 2rem;
+	background-color: #f7f4f3;
 	color: ${({ theme }) => theme.colors.gray3};
 `;
 interface IportfolioProps {

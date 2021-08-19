@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import CareerItem from './CareerItem';
 
 const Careers = styled.div`
 	margin-top: -2rem;
-	padding: 3rem 3rem;
+	padding: 1rem 3rem;
 	color: ${({ theme }) => theme.colors.gray6};
 `;
 const Company = styled.div`
@@ -35,7 +36,7 @@ const Deco = styled.div`
 	flex: 0 3rem;
 	display: flex;
 	flex-direction: column;
-	padding: 0.5rem 1rem 0.8rem 0;
+	padding: 0.5rem 1rem 2rem 0;
 	strong {
 		display: block;
 		width: 1rem;
@@ -90,7 +91,7 @@ const CareerItems: React.FunctionComponent<IcareerProps> = ({
 						[...project]
 							.reverse()
 							.map((item, index) => (
-								<p key={index}>{item.name}</p>
+								<CareerItem {...item} key={index} />
 							))}
 				</Project>
 			</Wrap>
