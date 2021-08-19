@@ -26,9 +26,15 @@ class CareerContainer extends Component<{}, IcareerState> {
 		try {
 			const { data: livart } = await careerApi.livart();
 			const { data: jobKorea } = await careerApi.jobKorea();
+			const { data: pulip } = await careerApi.pulip();
+			const { data: him } = await careerApi.him();
+			const { data: p4line } = await careerApi.p4line();
 			this.setState({
 				livart,
 				jobKorea,
+				pulip,
+				him,
+				p4line,
 			});
 		} catch {
 			this.setState({ error: "Can't find information" });

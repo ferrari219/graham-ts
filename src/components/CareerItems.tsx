@@ -35,7 +35,7 @@ const Deco = styled.div`
 	flex: 0 3rem;
 	display: flex;
 	flex-direction: column;
-	padding: 0.5rem 1rem 2rem 0;
+	padding: 0.5rem 1rem 0.8rem 0;
 	strong {
 		display: block;
 		width: 1rem;
@@ -56,46 +56,44 @@ const Project = styled.div`
 	flex: 1;
 `;
 interface IcareerProps {
-    company?: string | null;
-    date?: string | null;
-    job?: string | null;
-    project?: Array<{
-        id: number;
+	company?: string | null;
+	date?: string | null;
+	job?: string | null;
+	project?: Array<{
+		id: number;
 		name: string;
 		detail: string;
 		lnk: string;
-    }> | null;
+	}> | null;
 }
 
-const CareerItems:React.FunctionComponent<IcareerProps> = ({
-    company,
-    date,
-    job,
-    project
-    }) => {
-    return (
-        <Careers>
-				<Company>
-					<h4>{company}</h4>
-					<span>{date}</span>
-				</Company>
-				<Wrap>
-					<Deco>
-						<strong></strong>
-						<span></span>
-						<strong></strong>
-					</Deco>
-					<Project>
-						{project &&
-							[...project]
-								.reverse()
-								.map((item) => (
-									<p>{item.name}</p>
-								))}
-					</Project>
-				</Wrap>
-			</Careers>
-    );
+const CareerItems: React.FunctionComponent<IcareerProps> = ({
+	company,
+	date,
+	job,
+	project,
+}) => {
+	return (
+		<Careers>
+			<Company>
+				<h4>{company}</h4>
+				<span>{date}</span>
+			</Company>
+			<Wrap>
+				<Deco>
+					<strong></strong>
+					<span></span>
+					<strong></strong>
+				</Deco>
+				<Project>
+					{project &&
+						[...project]
+							.reverse()
+							.map((item) => <p>{item.name}</p>)}
+				</Project>
+			</Wrap>
+		</Careers>
+	);
 };
 
 export default CareerItems;
