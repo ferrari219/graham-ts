@@ -5,18 +5,18 @@
 	"project": [
 		{
 			"id": 0,
-			"title": "코스모폴리탄 리뉴얼",
+			"name": "코스모폴리탄 리뉴얼",
 			"detail": "전 페이지 디자인 및 코딩"
 		},
 		{
 			"id": 1,
-			"title": "박카스D 리뉴얼",
+			"name": "박카스D 리뉴얼",
 			"detail": "GDWEB winner prize, 사내 우수사원 포상, 전 페이지 디자인 및 코딩",
 			"lnk": "http://www.gdweb.co.kr/sub/view.asp?displayrow=60&Txt_key=all&Txt_word=&Txt_agnumber=&Txt_fgbn=5&Txt_bcode1=&Txt_gbflag=&Txt_bcode2=030710001&Txt_bcode3=&Txt_bcode4=&Txt_bcode5=&Page=28&str_no=1000"
 		},
 		{
 			"id": 2,
-			"title": "교통안전공단 리뉴얼",
+			"name": "교통안전공단 리뉴얼",
 			"detail": "서브 페이지 디자인 및 전 페이지 코딩"
 		}
 	]

@@ -5,17 +5,17 @@
 	"project": [
 		{
 			"id": 0,
-			"title": "EXR 마이크로사이트 ProgressiveSchool 리뉴얼 ",
+			"name": "EXR 마이크로사이트 ProgressiveSchool 리뉴얼 ",
 			"detail": "전페이지 디자인 및 코딩"
 		},
 		{
 			"id": 1,
-			"title": "놀부 브랜드 리뉴얼",
+			"name": "놀부 브랜드 리뉴얼",
 			"detail": "서브페이지 디자인 및 전페이지 코딩"
 		},
 		{
 			"id": 2,
-			"title": "HAZZYS 리뉴얼",
+			"name": "HAZZYS 리뉴얼",
 			"detail": "서브페이지 코딩"
 		}
 	]
