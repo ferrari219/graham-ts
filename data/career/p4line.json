@@ -1,12 +1,12 @@
 {
 	"company": "피포라인",
-	"companyEn": "P4line",
 	"date": "2006.1~2007.9",
 	"job": "인터넷사업부 웹디자인&퍼블리셔",
-	"jobEn": "Internet Business Department Web Designer & Coder",
 	"project": [
 		{
-			"title": "하프코인, 코인100, 현대하이넷 총 3개 사이트 홈페이지 제작"
+			"id": 0,
+			"title": "하프코인, 코인100, 현대하이넷 총 3개 사이트 홈페이지 제작",
+			"detail": ""
 		}
 	]
 }

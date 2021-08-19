@@ -1,19 +1,20 @@
 {
 	"company": "힘 커뮤니케이션",
-	"companyEn": "Him Communication",
 	"date": "2007.10~2008.10",
 	"job": "웹에이전시 웹디자인&퍼블리셔",
-	"jobEn": "WebAgency Web Designer&Coder",
 	"project": [
 		{
+			"id": 0,
 			"title": "EXR 마이크로사이트 ProgressiveSchool 리뉴얼 ",
 			"detail": "전페이지 디자인 및 코딩"
 		},
 		{
+			"id": 1,
 			"title": "놀부 브랜드 리뉴얼",
 			"detail": "서브페이지 디자인 및 전페이지 코딩"
 		},
 		{
+			"id": 2,
 			"title": "HAZZYS 리뉴얼",
 			"detail": "서브페이지 코딩"
 		}
