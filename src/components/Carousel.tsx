@@ -4,24 +4,28 @@ import { Link } from 'react-router-dom';
 
 const Wrap = styled.div`
 	/* width: 18rem; */
+	width: 17rem;
 	height: 33rem;
 	/* background-color: red; */
-	& + div {
-		margin: 0 3rem;
+	margin: 0 2rem;
+	&:first-child {
+		margin-left: 0;
 	}
 `;
 const Pic = styled.div`
 	overflow: hidden;
-	width: 17rem;
+	width: inherit;
 	height: 28rem;
 	border-radius: 2rem;
 	opacity: 1;
 	img {
+		display: block;
 		width: 100%;
 		box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 	}
 `;
 const Text = styled.div`
+	width: inherit;
 	margin-top: 2rem;
 	strong {
 		display: block;
