@@ -7,7 +7,7 @@ const Wrap = styled.div`
 	width: 17rem;
 	height: 33rem;
 	/* background-color: red; */
-	margin: 0 2rem;
+	/* margin: 0 2rem; */
 	&:first-child {
 		margin-left: 0;
 	}
@@ -60,7 +60,7 @@ const Carousel: React.FunctionComponent<IcarouselProps> = ({
 				<Pic>
 					<img
 						src={`https://ferrari219.github.io/graham-ts/data/img/career/livart/thumb${id}.jpg`}
-						alt="refer"
+						alt=""
 					/>
 				</Pic>
 				<Text>

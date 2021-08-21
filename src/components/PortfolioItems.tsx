@@ -35,9 +35,11 @@ const PortfolioItems: React.FunctionComponent<IportfolioitemsProps> = ({
 			<Sronly>Portfolio</Sronly>
 			<div>
 				{project &&
-					[...project].map((item, index) => (
-						<PortfolioItem {...item} key={index} />
-					))}
+					[...project]
+						.reverse()
+						.map((item, index) => (
+							<PortfolioItem {...item} key={index} />
+						))}
 			</div>
 		</Section>
 	);

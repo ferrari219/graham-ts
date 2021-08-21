@@ -1,5 +1,13 @@
 import React from 'react';
 import Menu from './Menu';
+import styled from 'styled-components';
+
+const Ul = styled.ul`
+	padding: 3rem 0;
+	li {
+		padding: 1rem 0;
+	}
+`;
 
 interface ImenusProps {
 	category?: Array<{
@@ -12,7 +20,7 @@ interface ImenusProps {
 const Menus: React.FunctionComponent<ImenusProps> = ({ category }) => {
 	// console.log(category);
 	return (
-		<ul>
+		<Ul>
 			{category &&
 				[...category].map((item) => (
 					<Menu
@@ -22,7 +30,7 @@ const Menus: React.FunctionComponent<ImenusProps> = ({ category }) => {
 						lnk={item.lnk}
 					/>
 				))}
-		</ul>
+		</Ul>
 	);
 };
 

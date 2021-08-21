@@ -1,11 +1,13 @@
 import Menus from 'components/Menus';
 import React from 'react';
 import styled from 'styled-components';
+import { SrOnly } from 'components/styles/globalStyle';
 import me from 'assets/img/me.png';
 
 const Div = styled.div`
 	width: 100vw;
 	height: 100vh;
+	padding: 3rem;
 	background-color: black;
 	color: white;
 	button {
@@ -14,6 +16,17 @@ const Div = styled.div`
 		right: 2rem;
 		color: ${({ theme }) => theme.colors.grayF};
 	}
+	p {
+		width: 7rem;
+		height: 7rem;
+		img {
+			width: inherit;
+			border-radius: 50%;
+		}
+	}
+`;
+const Sronly = styled.h1`
+	${SrOnly}
 `;
 
 const handleCloseBtn = (e: React.SyntheticEvent) => {
@@ -37,7 +50,7 @@ const RightMenuPresenter: React.FunctionComponent<IrightmnuProps> = ({
 	// console.log(category);
 	return (
 		<Div>
-			<h1>RightMenu</h1>
+			<Sronly>RightMenu</Sronly>
 			<p>
 				<img src={me} alt="My Profile img" />
 			</p>

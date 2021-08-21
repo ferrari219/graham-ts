@@ -8,11 +8,15 @@ const Div = styled.div`
 		margin: 2rem 0;
 	}
 	p {
+		overflow: hidden;
 		width: inherit;
 		height: 30rem;
-		background-color: #f3d46b;
+		/* background-color: #f3d46b; */
 		border-radius: 2rem 2rem 0 0;
-		text-indent: -5000px;
+		/* text-indent: -5000px; */
+		img {
+			width: 100%;
+		}
 	}
 	dl {
 		padding: 2rem;
@@ -46,7 +50,12 @@ const PortfolioItem: React.FunctionComponent<IportfolioitemProps> = ({
 }) => {
 	return (
 		<Div>
-			<p>사진영역</p>
+			<p>
+				<img
+					src={`https://ferrari219.github.io/graham-ts/data/img/career/livart/thumb${id}.jpg`}
+					alt=""
+				/>
+			</p>
 			<dl>
 				<dt>{name}</dt>
 				<dd>{detail}</dd>

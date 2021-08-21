@@ -13,8 +13,13 @@ const H3 = styled.h3`
 	color: ${({ theme }) => theme.colors.grayF};
 `;
 const CarouselItems = styled.div`
-	display: flex;
-	flex-direction: row;
+	overflow-x: auto;
+	overflow-y: hidden;
+	/* display: flex;
+	flex-direction: row; */
+	div {
+		display: inline-block;
+	}
 `;
 
 interface IcarouselProps {
