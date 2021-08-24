@@ -3,19 +3,14 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 const Wrap = styled.div`
-	/* width: 18rem; */
-	width: 17rem;
-	height: 33rem;
-	/* background-color: red; */
-	/* margin: 0 2rem; */
-	&:first-child {
-		margin-left: 0;
-	}
+	width: 100%;
+	height: 34rem;
+	padding: 0 1rem;
 `;
 const Pic = styled.div`
 	overflow: hidden;
 	width: inherit;
-	height: 28rem;
+	height: 24rem;
 	border-radius: 2rem;
 	opacity: 1;
 	img {
@@ -26,12 +21,13 @@ const Pic = styled.div`
 `;
 const Text = styled.div`
 	width: inherit;
-	margin-top: 2rem;
+	margin-top: 1rem;
 	strong {
 		display: block;
 		font-size: ${({ theme }) => theme.fonts.size.md};
 		font-weight: ${({ theme }) => theme.fonts.weight.bold};
 		color: ${({ theme }) => theme.colors.grayC};
+		line-height: 1.3;
 	}
 	span {
 		display: block;
