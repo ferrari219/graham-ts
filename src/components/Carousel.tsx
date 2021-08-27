@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 const Wrap = styled.div`
 	width: 100%;
@@ -52,18 +52,18 @@ const Carousel: React.FunctionComponent<IcarouselProps> = ({
 }) => {
 	return (
 		<Wrap>
-			<Link to="/:id">
-				<Pic>
-					<img
-						src={`https://ferrari219.github.io/graham-ts/data/img/career/livart/thumb${id}.jpg`}
-						alt=""
-					/>
-				</Pic>
-				<Text>
-					<strong>{name}</strong>
-					{/* <span>{detail}</span> */}
-				</Text>
-			</Link>
+			<Pic>
+				<img
+					src={`https://ferrari219.github.io/graham-ts/data/img/career/livart/thumb${id}.jpg`}
+					alt=""
+				/>
+			</Pic>
+			<Text>
+				<strong>{name}</strong>
+				{/* <span>{detail}</span> */}
+			</Text>
+			{/* <Link to="/:id">
+			</Link> */}
 		</Wrap>
 	);
 };

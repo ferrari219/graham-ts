@@ -1,30 +1,24 @@
 import Menus from 'components/Menus';
+import MyName from 'components/MyName';
 import React from 'react';
 import styled from 'styled-components';
 import { SrOnly } from 'components/styles/globalStyle';
-import me from 'assets/img/me.png';
+import { ReactComponent as Close } from 'assets/svg/close.svg';
 
 const Div = styled.div`
 	width: 100vw;
+	max-width: 89rem;
 	height: 100vh;
-	padding: 3rem;
-	background-color: black;
-	color: white;
+	background-color: ${({ theme }) => theme.colors.grayF};
+	color: ${({ theme }) => theme.colors.gray3};
 	button {
 		position: absolute;
 		top: 2rem;
 		right: 2rem;
-		color: ${({ theme }) => theme.colors.grayF};
-	}
-	p {
-		width: 7rem;
-		height: 7rem;
-		img {
-			width: inherit;
-			border-radius: 50%;
-		}
+		/* color: ${({ theme }) => theme.colors.grayF}; */
 	}
 `;
+const Wrap = styled.div``;
 const Sronly = styled.h1`
 	${SrOnly}
 `;
@@ -37,39 +31,31 @@ const handleCloseBtn = (e: React.SyntheticEvent) => {
 
 interface IrightmnuProps {
 	category: object | null;
-	// category?: Array<{
-	//   id: number;
-	//   name: string;
-	//   lnk: string;
-	// }>;
+	iam: object | null;
 }
 
 const RightMenuPresenter: React.FunctionComponent<IrightmnuProps> = ({
 	category,
+	iam,
 }) => {
 	// console.log(category);
 	return (
 		<Div>
 			<Sronly>RightMenu</Sronly>
-			<p>
-				<img src={me} alt="My Profile img" />
-			</p>
-			<button onClick={handleCloseBtn}>X</button>
-			<dl>
-				{/* {JSON.stringify(category)} */}
+			<Wrap>
+				<MyName {...iam} />
+				<button onClick={handleCloseBtn}>
+					<Close />
+				</button>
+				<dl>
+					{/* {JSON.stringify(category)} */}
 
-				<Menus {...category} />
-				{/* <dt>I am...</dt>
+					<Menus {...category} />
+					{/* <dt>I am...</dt>
         <dd>Skill</dd>
         <dd>Contact</dd> */}
-			</dl>
-			{/* 		
-    Career
-    - 현대리바트
-    ...
-    
-    Portfolio
-    */}
+				</dl>
+			</Wrap>
 		</Div>
 	);
 };

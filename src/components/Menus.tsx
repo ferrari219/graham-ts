@@ -3,7 +3,7 @@ import Menu from './Menu';
 import styled from 'styled-components';
 
 const Ul = styled.ul`
-	padding: 3rem 0;
+	padding: 3rem;
 	li {
 		padding: 1rem 0;
 	}
