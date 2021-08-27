@@ -20,7 +20,7 @@ class IamContainer extends Component<{}, IiamState> {
 			this.setState({
 				iam,
 			});
-			console.log(iam);
+			// console.log(iam);
 		} catch {
 			this.setState({ error: "can't find information" });
 		} finally {
