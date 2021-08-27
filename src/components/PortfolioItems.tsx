@@ -14,6 +14,7 @@ const Sronly = styled.h3`
 
 interface IportfolioitemsProps {
 	company?: string | null;
+	companyEn?: string | undefined;
 	date?: string | null;
 	job?: string | null;
 	project?: Array<{
@@ -29,7 +30,9 @@ const PortfolioItems: React.FunctionComponent<IportfolioitemsProps> = ({
 	date,
 	job,
 	project,
+	companyEn,
 }) => {
+	console.log(companyEn);
 	return (
 		<Section>
 			<Sronly>Portfolio</Sronly>
@@ -38,7 +41,11 @@ const PortfolioItems: React.FunctionComponent<IportfolioitemsProps> = ({
 					[...project]
 						.reverse()
 						.map((item, index) => (
-							<PortfolioItem {...item} key={index} />
+							<PortfolioItem
+								{...item}
+								companyEn={companyEn}
+								key={index}
+							/>
 						))}
 			</div>
 		</Section>

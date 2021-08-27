@@ -6,19 +6,39 @@ import { SrOnly } from 'components/styles/globalStyle';
 import { ReactComponent as Close } from 'assets/svg/close.svg';
 
 const Div = styled.div`
+	position: relative;
 	width: 100vw;
 	max-width: 89rem;
 	height: 100vh;
-	background-color: ${({ theme }) => theme.colors.grayF};
 	color: ${({ theme }) => theme.colors.gray3};
 	button {
 		position: absolute;
 		top: 2rem;
 		right: 2rem;
-		/* color: ${({ theme }) => theme.colors.grayF}; */
+		z-index: 3;
+		svg {
+			fill: ${({ theme }) => theme.colors.gray3} !important;
+		}
 	}
 `;
-const Wrap = styled.div``;
+const Wrap = styled.div`
+	position: relative;
+	width: 90%;
+	height: 100vh;
+	margin: 0 0 0 auto;
+	background-color: ${({ theme }) => theme.colors.grayF};
+	z-index: 2;
+`;
+const Dimmed = styled.div`
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: ${({ theme }) => theme.colors.gray0};
+	opacity: 0.7;
+	z-index: 1;
+`;
 const Sronly = styled.h1`
 	${SrOnly}
 `;
@@ -42,11 +62,11 @@ const RightMenuPresenter: React.FunctionComponent<IrightmnuProps> = ({
 	return (
 		<Div>
 			<Sronly>RightMenu</Sronly>
+			<button onClick={handleCloseBtn}>
+				<Close />
+			</button>
 			<Wrap>
 				<MyName {...iam} />
-				<button onClick={handleCloseBtn}>
-					<Close />
-				</button>
 				<dl>
 					{/* {JSON.stringify(category)} */}
 
@@ -56,6 +76,7 @@ const RightMenuPresenter: React.FunctionComponent<IrightmnuProps> = ({
         <dd>Contact</dd> */}
 				</dl>
 			</Wrap>
+			<Dimmed />
 		</Div>
 	);
 };

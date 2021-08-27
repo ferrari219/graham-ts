@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { baseURL } from 'api';
 
 const Div = styled.div`
 	background-color: ${({ theme }) => theme.colors.grayF};
@@ -40,6 +41,7 @@ interface IportfolioitemProps {
 	name?: string;
 	detail?: string;
 	lnk?: string;
+	companyEn?: string;
 }
 
 const PortfolioItem: React.FunctionComponent<IportfolioitemProps> = ({
@@ -47,12 +49,13 @@ const PortfolioItem: React.FunctionComponent<IportfolioitemProps> = ({
 	name,
 	detail,
 	lnk,
+	companyEn,
 }) => {
 	return (
 		<Div>
 			<p>
 				<img
-					src={`https://ferrari219.github.io/graham-ts/data/img/career/livart/thumb${id}.jpg`}
+					src={`${baseURL}img/career/${companyEn}/thumb${id}.jpg`}
 					alt=""
 				/>
 			</p>

@@ -32,7 +32,7 @@ const PortfolioPresenter: React.FunctionComponent<IportfolioProps> = ({
 				<Main>
 					<Headers current="Portfolio" />
 					<PortfolioItems {...livart} />
-					<PortfolioItems {...jobKorea} />
+					{/* <PortfolioItems {...jobKorea} /> */}
 					{error && <Error error={error} />}
 				</Main>
 			)}
