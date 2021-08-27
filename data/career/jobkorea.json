@@ -6,17 +6,20 @@
 	"jobEn": "Design team Web Designer & Coder",
 	"project": [
 		{
-			"name": "알바비책 하이브리드 앱 제작",
-			"detail": "photoshop, html, css, javascript, jquery 사용",
-			"lnk": "https://www.sktinsight.com/34700"
+			"id": 0,
+			"name": "통합검색 페이지 개편",
+			"detail": "photoshop, html, css, javascript, jquery 사용"
 		},
 		{
+			"id": 1,
 			"name": "포털 내 전체 팝업 개편",
 			"detail": "photoshop, html, css, javascript, jquery 사용"
 		},
 		{
-			"name": "통합검색 페이지 개편",
-			"detail": "photoshop, html, css, javascript, jquery 사용"
+			"id": 2,
+			"name": "알바비책 하이브리드 앱 제작",
+			"detail": "photoshop, html, css, javascript, jquery 사용",
+			"lnk": "https://www.sktinsight.com/34700"
 		}
 	]
 }
